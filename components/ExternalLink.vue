@@ -1,6 +1,6 @@
 <template>
   <li>
-    <nuxt-link :to="url" target="_blank" v-if="label && url">
+    <a :href="url" target="_blank" rel="noopener noreferrer" v-if="label && url">
       <dt
         class="flex items-center space-x-2 p-1 -m-1 rounded-xl hover:bg-slate-100 bg-slate-50"
       >
@@ -16,7 +16,7 @@
           </p>
         </div>
       </dt>
-    </nuxt-link>
+    </a>
   </li>
 </template>
 <script setup>

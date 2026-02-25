@@ -101,18 +101,13 @@ const props = defineProps({
   modelValue: Array,
 });
 const appendLink = () => {
-  props.modelValue.push({
-    i: "",
-    l: "",
-    u: "",
-  });
-  emit("update:modelValue", props.modelValue);
+  const updated = [...props.modelValue, { i: "", l: "", u: "" }];
+  emit("update:modelValue", updated);
 };
 
 const removeLink = (link) => {
-  const index = props.modelValue.indexOf(link);
-  props.modelValue.splice(index, 1);
-  emit("update:modelValue", props.modelValue);
+  const updated = props.modelValue.filter((item) => item !== link);
+  emit("update:modelValue", updated);
 };
 </script>
 <style scoped>

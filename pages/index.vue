@@ -22,7 +22,15 @@
         <app-form-hr />
         <app-form-links v-model="data.ls" />
       </div>
-      <div class="border-t bg-white flex items-center">
+      <div class="border-t bg-white flex items-center relative">
+        <transition name="toast">
+          <div
+            v-if="toastVisible"
+            class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-xs font-medium px-3 py-1.5 rounded-md shadow-lg whitespace-nowrap"
+          >
+            Link copied to clipboard!
+          </div>
+        </transition>
         <button
           @click="prefillDemoData"
           class="h-12 flex items-center space-x-2 px-4 border-r text-xs font-medium bg-white text-slate-700"
@@ -58,8 +66,21 @@
   </div>
 </template>
 
+<style>
+.toast-enter-active,
+.toast-leave-active {
+  transition: opacity 0.2s, transform 0.2s;
+}
+.toast-enter-from,
+.toast-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(4px);
+}
+</style>
+
 <script setup>
 import { encodeData } from "../utils/transformer";
+const toastVisible = ref(false);
 const data = ref({
   n: "",
   d: "",
@@ -120,10 +141,15 @@ const prefillDemoData = () => {
   };
 };
 
-const publish = () => {
+const publish = async () => {
   const url = `${window.location.origin}/1?data=${encodeData(data.value)}`;
-  navigator.clipboard.writeText(url).then(() => {
-    alert("Link copied to clipboard");
-  });
+  try {
+    await navigator.clipboard.writeText(url);
+  } catch {
+    prompt("Copy your link:", url);
+    return;
+  }
+  toastVisible.value = true;
+  setTimeout(() => { toastVisible.value = false; }, 2500);
 };
 </script>

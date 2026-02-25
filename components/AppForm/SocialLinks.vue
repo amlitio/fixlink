@@ -16,7 +16,7 @@
               <icon name="ph:facebook-logo-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="url"
               name="facebook"
               id="facebook"
               :value="facebook"
@@ -37,7 +37,7 @@
               <icon name="ph:twitter-logo-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="url"
               name="twitter"
               id="twitter"
               :value="twitter"
@@ -58,7 +58,7 @@
               <icon name="ph:instagram-logo-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="url"
               name="instagram"
               id="instagram"
               :value="instagram"
@@ -69,7 +69,7 @@
           </div>
         </div>
         <div>
-          <label for="instagram" class="block text-sm font-medium text-gray-700"
+          <label for="github" class="block text-sm font-medium text-gray-700"
             >Github</label
           >
           <div class="mt-1 flex rounded-md shadow-sm">
@@ -79,7 +79,7 @@
               <icon name="ph:github-logo-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="url"
               name="github"
               id="github"
               :value="github"
@@ -90,7 +90,7 @@
           </div>
         </div>
         <div>
-          <label for="instagram" class="block text-sm font-medium text-gray-700"
+          <label for="telegram" class="block text-sm font-medium text-gray-700"
             >Telegram</label
           >
           <div class="mt-1 flex rounded-md shadow-sm">
@@ -100,7 +100,7 @@
               <icon name="ph:telegram-logo-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="url"
               name="telegram"
               id="telegram"
               :value="telegram"
@@ -111,8 +111,8 @@
           </div>
         </div>
         <div>
-          <label for="instagram" class="block text-sm font-medium text-gray-700"
-            >Linkedin</label
+          <label for="linkedin" class="block text-sm font-medium text-gray-700"
+            >LinkedIn</label
           >
           <div class="mt-1 flex rounded-md shadow-sm">
             <span
@@ -121,7 +121,7 @@
               <icon name="ph:linkedin-logo-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="url"
               name="linkedin"
               id="linkedin"
               :value="linkedin"
@@ -132,7 +132,7 @@
           </div>
         </div>
         <div>
-          <label for="instagram" class="block text-sm font-medium text-gray-700"
+          <label for="email" class="block text-sm font-medium text-gray-700"
             >Email</label
           >
           <div class="mt-1 flex rounded-md shadow-sm">
@@ -142,7 +142,7 @@
               <icon name="ph:envelope-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="email"
               name="email"
               id="email"
               :value="email"
@@ -153,8 +153,8 @@
           </div>
         </div>
         <div>
-          <label for="instagram" class="block text-sm font-medium text-gray-700"
-            >Youtube</label
+          <label for="youtube" class="block text-sm font-medium text-gray-700"
+            >YouTube</label
           >
           <div class="mt-1 flex rounded-md shadow-sm">
             <span
@@ -163,7 +163,7 @@
               <icon name="ph:youtube-logo-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="url"
               name="youtube"
               id="youtube"
               :value="youtube"
@@ -174,8 +174,8 @@
           </div>
         </div>
         <div>
-          <label for="instagram" class="block text-sm font-medium text-gray-700"
-            >Whatsapp</label
+          <label for="whatsapp" class="block text-sm font-medium text-gray-700"
+            >WhatsApp</label
           >
           <div class="mt-1 flex rounded-md shadow-sm">
             <span
@@ -184,7 +184,7 @@
               <icon name="ph:whatsapp-logo-duotone" class="w-5 h-5" />
             </span>
             <input
-              type="search"
+              type="tel"
               name="whatsapp"
               id="whatsapp"
               :value="whatsapp"
